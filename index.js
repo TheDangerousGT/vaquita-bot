@@ -332,10 +332,6 @@ if(blacklist.tiene(message.author.id)) return message.channel.send(':no_entry_si
                   name: 'Música',
                   value: '1. join\n2. leave',
                 },
-                {
-                  name: '||NSFW||',
-                  value: '1. ||fuck||\n2. ||cum||\n3. ||gmasturbate||\n4. ||boobjob||\n5. ||boobs||',
-                },
             ],
             footer: {
                 text: 'Recuerda que mi prefix es: p! / Pronto habran mas comandos!'
@@ -1384,116 +1380,7 @@ if(blacklist.tiene(message.author.id)) return message.channel.send('No puedes us
         }
 
 
-        if(message.content.startsWith(prefix+"boobs")){
-          const Discord = require("discord.js"); ///llamamos a la constante discord.
-          let thumb = ["https://lh3.googleusercontent.com/proxy/44idgTq25n_7OsCJMN6pch_J9qfCtdxBzn84uespJRr0Jh1QFdwAV0MJ9qfo9Zx_cSwXcNuOSuesOIkPZDlwEQu-xg", "http://24.media.tumblr.com/bba4cdacffc8beec7a292577c0874921/tumblr_mj3lziGXxG1r6z4wzo1_500.gif", "https://sexdicted.com/wp-content/uploads/2019/07/lesbian_an-8069.gif", "https://cdnpins.intctrl.com/577ceef8ec8d835dd6000006-f255845f86071c23ca2bc0f895a00e08091641bb.gif?1467805425", "https://besthentaigifs.com/content/_gifs/hentai/sexcom/4084002_min.gif", "https://hporn.info/imgs/64049eb6efa8a0a6703abd8e2a14a9ba.gif", "https://hporn.info/imgs/717.gif", "https://cdn.sex.com/images/pinporn/2019/07/22/21519139.gif?width=620"]//hacemos un let thumb para poner los posibles gifs que va a tener
-var boobs = thumb[Math.floor(Math.random() * thumb.length)]
-          
-              if(!message.channel.nsfw) return message.channel.send(":no_entry_sign: | No puedes utilizar este comando en un chat que no es **NSFW**") ///esto hara que no funcione en chats normales.
-          
-              const embed = new Discord.MessageEmbed() ///creamos el embed.
-              .setTitle("Disfruta esas boobs pajín")
-              .setImage(boobs)
-              .setColor("RANDOM")
-              .setFooter(" VAQUITA | NSFW", client.user.displayAvatarURL())
-              message.channel.send(embed) ///enviamos.
-          }
-          if(message.content.startsWith(prefix+"fuck")){
-            const db = require('megadb'); //Definimos db
-          let blacklist = new db.crearDB('blacklist');
-          if(blacklist.tiene(message.author.id)) return message.channel.send('No puedes usar este comando, estás en la blacklist!')
-            const Discord = require('discord.js');
-            if(!message.channel.nsfw) return message.channel.send(":no_entry_sign: | No puedes utilizar este comando en un chat que no es **NSFW**") ///esto hara que no funcione en chats normales.
-          let thumb = ["https://bestanimegifs.com/content/_gifs/hentai/sexcom/14665910_min.gif", "http://megaboobscartoons.com/gals/wp-content/uploads/2015/10/tumblr_n71j969JT71toy0ydo1_500.gif", "https://hentaigif.org/content/_gifs/hentai/sexcom/2913510_min.gif", "http://31.media.tumblr.com/d07951bc4dcb24e29c173fb231a43103/tumblr_nrpwt7Hjzx1uqarako1_500.gif", "https://x3vid.com/images/4129/ep8.xhcdn.com_000_106_508_679_1000.gif", "http://ist2-2.filesor.com/pimpandhost.com/1/2/6/1/126173/2/f/l/n/2flnJ/3554351-fabulous-booty-in-this-awesome-fuck-anime-porn-animation.gif", "https://lh3.googleusercontent.com/proxy/bxDa-wK45sMPdr539uyNzauijLLdJa-5byli2aT7PYkIVCLzKsbOFfbSOTqtbTcu9bYt4fkYj8DA4IysegvEn78de6_wZJe1JGboIlx2d2mAvnQwANZhWpYy_Xv7IxQT-1ms51Id2NbVHs3z57tlXN2i81-Ko61S", "https://i.makeagif.com/media/8-13-2018/5apr5A.gif", "https://i2.wp.com/i.imgur.com/9MJqG7Q.gif?resize=640%2C480", "https://lh3.googleusercontent.com/proxy/fY0ExDtG6ry_ZXSdS3sDGljnUEkw1-ORN6juUyrxdpLi-x-0nGSpnDdEcrhF43M1sCFgAAAWhkjVV1b-0rvichpCh0xzRUHK5Y4NdbQKZ-ahulaBhSxQhBOx3D4PJAribSxMnu7cfBVXcrYrtuc", "https://cumception.com/wp-content/upload/2017/03/anime_hentai_sex-8763.gif", "https://cumception.com/wp-content/upload/2017/03/anime_hent-3010.gif", "https://cumception.com/wp-content/upload/2017/03/anime_hent-3711.gif", "https://cumception.com/wp-content/upload/2017/03/anime_henta-1222.gif"]//hacemos un let thumb para poner los posibles gifs que va a tener
-          var fuck = thumb[Math.floor(Math.random() * thumb.length)]// un var enlace para poner que va a elegir uno random del let thumb
-          if(!message.mentions.users.first()) {
-          const embed = new Discord.MessageEmbed()//definimos embed
-          message.channel.send('¡Menciona a alguien!')
-          
-          
-          } else {
-          
-          let userm = message.mentions.users.first()
-          
-          const embed = new Discord.MessageEmbed()
-          .setDescription("**" + message.author.username + "**" + " se follo a " + "**" + userm.username + "**")//la descipcion si quieres puedes cambiarla
-          .setColor("RANDOM")//color random
-          .setImage(fuck)//aqui en imagen ponemos el var enlace
-          .setFooter(`Comando solicitado por ${message.member.displayName}`, client.user.displayAvatarURL())
-          .setTimestamp();
-          message.channel.send({embed});
-          }
-          }
-                    if(message.content.startsWith(prefix+"cum")){
-            const db = require('megadb'); //Definimos db
-          let blacklist = new db.crearDB('blacklist');
-          if(blacklist.tiene(message.author.id)) return message.channel.send('No puedes usar este comando, estás en la blacklist!')
-            const Discord = require('discord.js');
-            if(!message.channel.nsfw) return message.channel.send(":no_entry_sign: | No puedes utilizar este comando en un chat que no es **NSFW**") ///esto hara que no funcione en chats normales.
-          let thumb = ["https://picsegg.com/pics/2450/anime-hentai-cum-animated-gif.gif", "https://static.hentai-gif-anime.com/upload/20160425/3/4212/detail.gif", "https://i1.wp.com/static1.e621.net/data/b9/64/b964cb7a2bfcaa0b340638ca79ba9a34.gif", "https://i0.wp.com/raikou1.donmai.us/ea/be/__yamamoto_noriko_lovers_drawn_by_taki_minashika__eabe68ccd7bfa5813891d9de956412ca.gif", "https://i0.wp.com/static1.e621.net/data/02/f5/02f5bd7aa69af0fd634fcbf8169e42e7.gif", "https://cdn.sex.com/images/pinporn/2020/06/08/23138784.gif?width=620", "https://cumception.com/wp-content/upload/2017/03/anime_hentai-3426.gif", "https://static.hentai-gif-anime.com/upload/20160425/3/4227/detail.gif", "http://img.rule34.xxx/images/1545/575f272e3580383b5528a980c9060a8362233bff.gif"]//hacemos un let thumb para poner los posibles gifs que va a tener
-          var cum = thumb[Math.floor(Math.random() * thumb.length)]// un var enlace para poner que va a elegir uno random del let thumb
-          if(!message.mentions.users.first()) {
-          const embed = new Discord.MessageEmbed()//definimos embed
-          message.channel.send('¡Menciona a alguien!')
-          
-          
-          } else {
-          
-          let userm = message.mentions.users.first()
-          
-          const embed = new Discord.MessageEmbed()
-          .setDescription("**" + message.author.username + "**" + " se vino en " + "**" + userm.username + "**")//la descipcion si quieres puedes cambiarla
-          .setColor("RANDOM")//color random
-          .setImage(cum)//aqui en imagen ponemos el var enlace
-          .setFooter(`Comando solicitado por ${message.member.displayName}`, client.user.displayAvatarURL())
-          .setTimestamp();
-          message.channel.send({embed});
-          }
-          }
-          if(message.content.startsWith(prefix+"boobjob")){
-            const db = require('megadb'); //Definimos db
-          let blacklist = new db.crearDB('blacklist');
-          if(blacklist.tiene(message.author.id)) return message.channel.send('No puedes usar este comando, estás en la blacklist!')
-            const Discord = require('discord.js');
-            if(!message.channel.nsfw) return message.channel.send(":no_entry_sign: | No puedes utilizar este comando en un chat que no es **NSFW**") ///esto hara que no funcione en chats normales.
-          let thumb = ["https://64.media.tumblr.com/1872ec20dbf13c6cacebcc7730220a4b/tumblr_mor9xjqEuT1s5fe8vo1_500.gifv", "https://64.media.tumblr.com/cabdc00904d75e1e25dac2321f2cc8a6/tumblr_mk1oc3cPDg1rrsoino1_500.gifv", "https://66.media.tumblr.com/516a1f8f3e23b47050c0ba891e503b54/tumblr_pjlv4vMCw11xotgrao1_1280.gif", "https://cdn.sex.com/images/pinporn/2021/02/03/24509102.gif?width=620", "https://cdn.sex.com/images/pinporn/2020/03/14/22724223.gif?width=620", "https://cdn.sex.com/images/pinporn/2019/06/01/21247385.gif?width=620", "https://cdn.sex.com/images/pinporn/2019/10/14/21982884.gif?width=620"]//hacemos un let thumb para poner los posibles gifs que va a tener
-          var cum = thumb[Math.floor(Math.random() * thumb.length)]// un var enlace para poner que va a elegir uno random del let thumb
-          if(!message.mentions.users.first()) {
-          const embed = new Discord.MessageEmbed()//definimos embed
-          message.channel.send('¡Menciona a alguien!')
-          
-          
-          } else {
-          
-          let userm = message.mentions.users.first()
-          
-          const embed = new Discord.MessageEmbed()
-          .setDescription("**" + message.author.username + "**" + " le hizo una rusa a " + "**" + userm.username + "**")//la descipcion si quieres puedes cambiarla
-          .setColor("RANDOM")//color random
-          .setImage(cum)//aqui en imagen ponemos el var enlace
-          .setFooter(`Comando solicitado por ${message.member.displayName}`, client.user.displayAvatarURL())
-          .setTimestamp();
-          message.channel.send({embed});
-          }
-          }
-          if(message.content.startsWith(prefix+"gmasturbate")){
-            const db = require('megadb'); //Definimos db
-          let blacklist = new db.crearDB('blacklist');
-          if(blacklist.tiene(message.author.id)) return message.channel.send('No puedes usar este comando, estás en la blacklist!')
-            const Discord = require('discord.js');
-            if(!message.channel.nsfw) return message.channel.send(":no_entry_sign: | No puedes utilizar este comando en un chat que no es **NSFW**") ///esto hara que no funcione en chats normales.
-          let thumb = ["https://porngifs.ca/wp-content/uploads/2020/07/gif-big-tits-anime-babe-masturbating_5f0111b2942d0.gif", "https://cumception.com/wp-content/upload/2020/02/anime_girls_hen-1599.gif", "https://cumception.com/wp-content/upload/2020/02/anime_girls_hentai-1758.gif", "https://cumception.com/wp-content/upload/2020/02/anime_girls_h-5908.gif", "https://cumception.com/wp-content/upload/2020/02/anime_girls_-3243.gif", "https://cumception.com/wp-content/upload/2020/02/anime_girls_hentai_-8630.gif", "https://cumception.com/wp-content/upload/2020/02/anime_girl-8926.gif", "https://cumception.com/wp-content/upload/2020/02/anime_girls_hen-4464.gif", "https://cdn.sex.com/images/pinporn/2013/12/19/4410657.gif?width=620", "https://static8.hentai-img.com/upload/20200119/607/620679/1.gif", "https://static8.hentai-img.com/upload/20200119/607/620679/4.gif"]//hacemos un let thumb para poner los posibles gifs que va a tener
-          var gmasturbate = thumb[Math.floor(Math.random() * thumb.length)]
-          
-          if(!message.channel.nsfw) return message.channel.send(":no_entry_sign: | No puedes utilizar este comando en un chat que no es **NSFW**") ///esto hara que no funcione en chats normales.
-      
-          const embed = new Discord.MessageEmbed() ///creamos el embed.
-          .setTitle("**" + message.author.username + "**" + " se está ummm... ")
-          .setImage(gmasturbate)
-          .setColor("RANDOM")
-          .setFooter(" VAQUITA | NSFW", client.user.displayAvatarURL())
-          message.channel.send(embed) ///enviamos.
-      }
+
         if(message.content.startsWith(prefix+"encuesta")){
           if(!args) return message.channel.send('Agrege una pregunta para la encuesta.')  
  
