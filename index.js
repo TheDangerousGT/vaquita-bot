@@ -39,12 +39,6 @@ client.on('ready', () => {
 
 });
 
-client.on('ready', () => {
-  var generalChannel = client.channels.cache.get("839885640946679818")
-  generalChannel.send("Patata Bot Actualizado Correctamente!")
-
-});
-
 var prefix = config.prefix;
 
 client.on('message', message => {
